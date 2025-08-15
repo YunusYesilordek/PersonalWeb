@@ -40,4 +40,35 @@
   .about-content {
     padding: 0 1rem;
   }
+  
+  .about-text {
+    gap: 1.5rem;
+  }
+  
+  .about-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .about-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content {
+    padding: 0 0.5rem;
+  }
+  
+  .about-text {
+    gap: 1rem;
+  }
+  
+  .about-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .about-card p {
+    font-size: 0.95rem;
+  }
 }

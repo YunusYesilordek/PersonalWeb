@@ -82,6 +82,7 @@
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .project-card {
@@ -94,6 +95,14 @@
 
   .project-emoji {
     font-size: 3rem;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
   }
 
   .project-links {
