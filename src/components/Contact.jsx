@@ -27,30 +27,19 @@ const Contact = () => {
     setIsSubmitting(true)
     setSubmitStatus('')
 
-    try {
-      // EmailJS ile email gönderimi (env değişkenleri üzerinden)
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-
-      if (!serviceId || !templateId || !publicKey) {
-        console.error('EmailJS environment variables missing: VITE_EMAILJS_SERVICE_ID / VITE_EMAILJS_TEMPLATE_ID / VITE_EMAILJS_PUBLIC_KEY')
-        setSubmitStatus('error')
-        setIsSubmitting(false)
-        return
-      }
-
-      const result = await emailjs.send(
-        serviceId,
-        templateId,
+          try {
+        // EmailJS ile email gönderimi
+        const result = await emailjs.send(
+          'service_xp6bpje', // EmailJS Service ID
+          'template_64pe85w', // EmailJS Template ID
         {
           from_name: formData.name,
           from_email: formData.email,
           subject: formData.subject,
           message: formData.message,
           to_name: 'Yunus Yeşilördek'
-        },
-        publicKey
+                  },
+          'sF5ZvQDwA0uMkaKnC' // EmailJS Public Key
       )
 
       if (result.status === 200) {
