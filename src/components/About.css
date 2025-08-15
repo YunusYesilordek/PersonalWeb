@@ -1,0 +1,43 @@
+.about-content {
+  display: flex;
+  justify-content: center;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.about-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #adadad;
+}
+
+.about-card p {
+  color: #adadad;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.about-card strong {
+  color: #66c0f4;
+  font-weight: 600;
+}
+
+
+
+@media (max-width: 768px) {
+  .about-content {
+    padding: 0 1rem;
+  }
+}
