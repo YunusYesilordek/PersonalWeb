@@ -3,11 +3,12 @@
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(23, 26, 33, 0.95);
+  background: rgba(var(--bg-color), 0.95);
   backdrop-filter: blur(10px);
   z-index: 1000;
   padding: 1rem 0;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 20px var(--shadow-color);
+  transition: var(--transition);
 }
 
 .header-content {
@@ -17,9 +18,10 @@
 }
 
 .logo h2 {
-  color: #66c0f4;
+  color: var(--primary-color);
   font-size: 1.5rem;
   font-weight: 700;
+  transition: var(--transition);
 }
 
 .nav-list {
@@ -32,18 +34,33 @@
 .nav-list button {
   background: none;
   border: none;
-  color: #adadad;
+  color: var(--text-color);
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: var(--transition);
   padding: 0.5rem 1rem;
   border-radius: 6px;
 }
 
 .nav-list button:hover {
-  color: #66c0f4;
-  background: rgba(102, 192, 244, 0.1);
+  color: var(--primary-color);
+  background: rgba(var(--primary-color), 0.1);
+}
+
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(var(--primary-color), 0.1);
+  transition: var(--transition);
+}
+
+.theme-toggle:hover {
+  transform: rotate(30deg);
 }
 
 .mobile-menu-btn {
@@ -56,7 +73,7 @@
 .mobile-menu-btn span {
   width: 25px;
   height: 3px;
-  background: #adadad;
+  background: var(--text-color);
   transition: all 0.3s ease;
 }
 
@@ -78,9 +95,9 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: #232730;
+    background: var(--card-bg);
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px var(--shadow-color);
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;

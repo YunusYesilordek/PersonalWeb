@@ -15,11 +15,11 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #adadad;
+  color: var(--heading-color);
 }
 
 .about-card p {
-  color: #adadad;
+  color: var(--text-color);
   line-height: 1.7;
   font-size: 1.1rem;
   margin-bottom: 1rem;
@@ -30,7 +30,7 @@
 }
 
 .about-card strong {
-  color: #66c0f4;
+  color: rgb(var(--primary-color));
   font-weight: 600;
 }
 
