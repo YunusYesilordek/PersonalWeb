@@ -15,17 +15,17 @@
   display: flex;
   align-items: center;
   padding: 1.5rem;
-  background: #232730;
+  background: var(--card-bg);
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px var(--shadow-color);
   transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border: 2px solid var(--card-border);
 }
 
 .skill-item:hover {
-  border-color: #66c0f4;
+  border-color: rgb(var(--primary-color));
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(102, 192, 244, 0.2);
+  box-shadow: 0 8px 30px rgba(var(--primary-color), 0.2);
 }
 
 .skill-icon {
@@ -36,7 +36,7 @@
 
 .skill-name {
   font-weight: 600;
-  color: #adadad;
+  color: var(--text-color);
   font-size: 1.1rem;
   letter-spacing: 0.5px;
 }

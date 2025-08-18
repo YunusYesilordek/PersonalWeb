@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './Header.css'
+import { ThemeContext } from '../context/ThemeContext'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { theme, toggleTheme } = useContext(ThemeContext)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -30,6 +32,11 @@ const Header = () => {
               <li><button onClick={() => scrollToSection('skills')}>Yetenekler</button></li>
               <li><button onClick={() => scrollToSection('projects')}>Projeler</button></li>
               <li><button onClick={() => scrollToSection('contact')}>İletişim</button></li>
+              <li>
+                <button className="theme-toggle" onClick={toggleTheme}>
+                  {theme === 'dark' ? '☀️' : '🌙'}
+                </button>
+              </li>
             </ul>
           </nav>
 
